@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HW_LocalDB_XamarainApp.MainPage">
+    <StackLayout Margin="20,35,20,20">
+        <Entry x:Name="nameEntry" Placeholder="Enter Name"/>
+        <Entry x:Name="ageEntry" Placeholder="Enter Age"/>
+        <Entry x:Name="cgpaEntry" Placeholder="Enter CGPA"/>
+        <Button Text="Add to Database" Clicked="OnButtonClicked"/>
+        <CollectionView x:Name="collectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Grid Padding="10" RowDefinitions="Auto, *">
+                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding Name}" FontSize="Medium"/>
+                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Age}" TextColor="Silver" FontSize="Small"/>
+                            <Label Grid.Row="0" Grid.Column="3" Text="{Binding CGPA}" TextColor="Silver" FontSize="Medium"/>
+                        </Grid>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>
